@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Update Film</h1>
+   
+    <a href="#" routerLink="/" class="btn btn-primary">Back</a>
+          
+    <form [formGroup]="updateform" (ngSubmit)="submit()">
+    
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" [(ngModel)]="post.title" formControlName="title">
+        </div>
+   
+        <div class="form-group">
+            <div class="form-group">
+                <label for="title">Year</label>
+                <input type="text" id="year" class="form-control" [(ngModel)]="post.year" formControlName="year">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label for="title">Director</label>
+                <input type="text" id="director" class="form-control" [(ngModel)]="post.director" formControlName="director">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label for="title">Stars</label>
+                <input type="text" id="stars" class="form-control" [(ngModel)]="post.stars" formControlName="stars">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label for="title">Review</label>
+                <textarea 
+                formControlName="review"
+                id="review" 
+                type="text" [(ngModel)]="post.review"
+                class="form-control">
+            </textarea>
+            </div>
+        </div>
+         
+        <button class="btn btn-primary" type="submit" >Update</button>
+    </form>
+</div>
